@@ -7,7 +7,6 @@ export const env = createEnv({
     DB_HOST: z.string().nonempty(),
     DB_USERNAME: z.string().nonempty(),
     DB_PASSWORD: z.string().nonempty(),
-    DB_NAME: z.string().nonempty(),
     QSTASH_TOKEN: z.string().nonempty(),
     QSTASH_PUBLISH_URL: z.string().url().nonempty(),
     QSTASH_CURRENT_SIGNING_KEY: z.string().nonempty(),
