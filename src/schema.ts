@@ -1,1 +1,1 @@
-import { mysqlTable } from "drizzle-orm/mysql-core";
+import { mysqlTable } from 'drizzle-orm/mysql-core';

@@ -1,5 +1,5 @@
-import { Resend } from "resend";
-import { env } from "./env.mjs";
+import { Resend } from 'resend';
+import { env } from './env.mjs';
 
 const resend = new Resend(env.RESEND_API_KEY);
 
@@ -14,14 +14,14 @@ export async function sendEmail({
   content,
   from,
   subject,
-  to,
+  to
 }: SendEmailConfig) {
   try {
     const sendingEmailResponse = await resend.emails.send({
       from,
       to,
       subject,
-      html: content,
+      html: content
     });
 
     console.log({ sendingEmailResponse });
@@ -30,4 +30,4 @@ export async function sendEmail({
   }
 }
 
-const defaultDevEmail = "onboarding@resend.dev";
+const defaultDevEmail = 'onboarding@resend.dev';

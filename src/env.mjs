@@ -1,5 +1,5 @@
-import { createEnv } from "@t3-oss/env-nextjs";
-import { z } from "zod";
+import { createEnv } from '@t3-oss/env-nextjs';
+import { z } from 'zod';
 
 export const env = createEnv({
   server: {
@@ -12,11 +12,11 @@ export const env = createEnv({
     QSTASH_PUBLISH_URL: z.string().url().nonempty(),
     QSTASH_CURRENT_SIGNING_KEY: z.string().nonempty(),
     QSTASH_NEXT_SIGNING_KEY: z.string().nonempty(),
-    IS_PRODUCTION: z.string().transform((s) => s === "production"),
+    IS_PRODUCTION: z.string().transform((s) => s === 'production'),
     EDGE_CONFIG: z.string().url().nonempty(),
     RESEND_API_KEY: z.string().nonempty(),
     KV_REST_API_URL: z.string().url().nonempty(),
-    KV_REST_API_TOKEN: z.string().nonempty(),
+    KV_REST_API_TOKEN: z.string().nonempty()
   },
   client: {
     NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: z.string().nonempty(),
@@ -24,7 +24,7 @@ export const env = createEnv({
     NEXT_PUBLIC_CLERK_SIGN_UP_URL: z.string().nonempty(),
     NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL: z.string().nonempty(),
     NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL: z.string().nonempty(),
-    NEXT_PUBLIC_IS_PRODUCTION: z.string().transform((s) => s === "production"),
+    NEXT_PUBLIC_IS_PRODUCTION: z.string().transform((s) => s === 'production')
   },
   runtimeEnv: {
     CLERK_SECRET_KEY: process.env.CLERK_SECRET_KEY,
@@ -49,6 +49,6 @@ export const env = createEnv({
       process.env.NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL,
     NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL:
       process.env.NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL,
-    NEXT_PUBLIC_IS_PRODUCTION: process.env.NODE_ENV,
-  },
+    NEXT_PUBLIC_IS_PRODUCTION: process.env.NODE_ENV
+  }
 });
