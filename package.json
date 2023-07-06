@@ -1,0 +1,38 @@
+{
+  "name": "nex-playground-2",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@clerk/nextjs": "^4.21.14",
+    "@planetscale/database": "^1.8.0",
+    "@t3-oss/env-nextjs": "^0.6.0",
+    "@types/node": "^20.4.0",
+    "@types/react": "18.2.14",
+    "@types/react-dom": "18.2.6",
+    "@upstash/qstash": "^0.3.6",
+    "@vercel/edge-config": "^0.2.1",
+    "@vercel/kv": "^0.2.2",
+    "autoprefixer": "10.4.14",
+    "drizzle-orm": "^0.27.0",
+    "eslint": "8.44.0",
+    "eslint-config-next": "^13.4.8",
+    "next": "^13.4.8",
+    "postcss": "8.4.24",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "resend": "^0.16.0",
+    "tailwindcss": "3.3.2",
+    "typescript": "5.1.6",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1",
+    "drizzle-kit": "^0.19.3"
+  }
+}
